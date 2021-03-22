@@ -1,0 +1,57 @@
+using System;
+
+namespace cch
+{
+    public class Contacto {
+
+        public string nombre;
+        public string apellido;
+        public string telefono;
+        public string direccion;
+
+
+
+        public Contacto(){
+            nombre = "Andy";
+            apellido = "Marmolejos";
+            telefono = "809-702-1805";
+            direccion = "Los Pinos de Hainamosa Central Calle N #1";
+        }
+
+        public void SetContacto() { 
+            Console.WriteLine("\nEscriba el Nombre");
+            nombre = Console.ReadLine();
+            Console.WriteLine("Escriba el apellido");
+            apellido = Console.ReadLine();
+            Console.WriteLine("Escriba el Telefono");
+            telefono = Console.ReadLine();
+            Console.WriteLine("Escriba el direccion");
+            direccion = Console.ReadLine();
+        } 
+
+        public void Saludar() { 
+            Console.WriteLine("\nHola, soy "+nombre+" "+apellido);
+            Console.WriteLine("Mi telefono es "+telefono);
+            Console.WriteLine("Mi direccion es "+direccion);
+        } 
+
+    }
+
+    class ProbarContacto {
+        
+        public static void Main(string[] args){
+            Contacto contacto1 = new Contacto();
+            Contacto contacto2 = new Contacto();
+            
+            //LLENAR LOS DATOS
+            Console.WriteLine("\nPrimer Contacto");
+            contacto1.SetContacto();
+            Console.WriteLine("\nSegundo Contacto");
+            contacto2.SetContacto();
+
+            //SALUDO
+            contacto1.Saludar();
+            contacto2.Saludar();
+        }
+    }
+}
