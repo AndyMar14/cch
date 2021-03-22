@@ -1,0 +1,31 @@
+using System;
+
+namespace cch
+{
+    public class ClaseA {
+        public ClaseA(){
+            Console.WriteLine("Soy la clase A");
+        }
+    }
+
+    public class ClaseB:ClaseA {
+         public ClaseB(){
+            Console.WriteLine("Soy la clase B");
+        }
+    }
+
+    public class ClaseC:ClaseB {
+         public ClaseC(){
+            Console.WriteLine("Soy la clase C");
+        }
+    }
+
+    class program {
+        
+        public static void Main(string[] args){
+            
+            ClaseC clase = new ClaseC();
+
+        }
+    }
+}
